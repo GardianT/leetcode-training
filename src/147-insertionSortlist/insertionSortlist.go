@@ -1,3 +1,6 @@
+// Q:
+// 对链表进行插入排序。
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
