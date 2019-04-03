@@ -16,6 +16,8 @@
 # ]
 
 # 思路：dfs
+# 还有一种解法：遍历 0 到 2**len(nums)。转换成二进制。
+# 二进制中1的位置就代表取这个数字。也是最终结果。
 class Solution(object):
     def subsets(self, nums):
         """
