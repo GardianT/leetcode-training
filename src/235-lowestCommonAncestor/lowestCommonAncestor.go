@@ -32,7 +32,8 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
         return root
     }
     
-    if (findTarget(root.Left, p) && findTarget(root.Right, q)) || (findTarget(root.Right, p) && findTarget(root.Left, q)) {
+	if (findTarget(root.Left, p) && findTarget(root.Right, q)) || 
+		(findTarget(root.Right, p) && findTarget(root.Left, q)) {
         return root
     }
     
