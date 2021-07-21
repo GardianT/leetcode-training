@@ -8,10 +8,20 @@
 class Solution {
 public:
     double findMaxAverage(vector<int>& nums, int k) {
-        std::sort(nums.begin(), nums.end());
+        
         int sum = 0;
-        for (int i = nums.size() - 1; i >= 0; i--) {
+        for (int i = 0; i < k; ++i) {
             sum += nums[i];
+        }
+        int tmp = sum;
+        int l = 0;
+        int r = k;
+        while (r < nums.size()) {
+            tmp += nums[r];
+            tmp -= nums[l];
+            sum = max(sum, tmp);
+            r++;
+            l++;
         }
         return sum / double(k);
     }
