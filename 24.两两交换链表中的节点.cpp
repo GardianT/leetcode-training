@@ -18,15 +18,15 @@
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
-      if (head == nullptr || head->next == nullptr) {
-        return head;
-      }
-      auto n1 = head;
-      auto n2 = head->next;
-      auto n3 = swapPairs(n2->next);
-      n2->next = n1;
-      n1->next = n3;
-      return n2;
+        if (head == nullptr || head->next == nullptr) {
+            return head;
+        }
+        auto n1 = head->next;
+        auto n2 = n1->next;
+        
+        head->next = swapPairs(n2);
+        n1->next = head;
+        return n1;
     }
 };
 // @lc code=end
