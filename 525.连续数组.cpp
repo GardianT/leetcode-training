@@ -8,6 +8,7 @@
 class Solution {
 public:
     int findMaxLength(vector<int>& nums) {
+<<<<<<< HEAD
         for (int i = 0; i < nums.size(); ++i) {
             if (nums[i] == 0) {
                 nums[i] = -1;
@@ -28,6 +29,9 @@ public:
             }
         }
         return res;
+=======
+
+>>>>>>> 5ba0f77df587e1b306c2504603748f137201863c
     }
 };
 // @lc code=end
